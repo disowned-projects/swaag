@@ -1,0 +1,16 @@
+openapi: 3.0.0
+
+info:
+  title: Example API
+  version: 0.1.0
+
+paths:
+  /user/add:
+    $ref: endpoints/addUser.yaml
+    
+components:
+  securitySchemes:
+    $ref: components/securitySchemes.yaml
+  responses:
+    $ref: components/responses.yaml
+

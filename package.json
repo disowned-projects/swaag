@@ -1,0 +1,19 @@
+{
+  "name": "swaag",
+  "version": "0.1.0",
+  "description": "API to generate and host swagger UI from documentation files",
+  "main": "index.js",
+  "repository": "https://github.com/doshisid/swaag",
+  "author": "Siddharth Doshi <sidoshi510@gmail.com> (https://sid.sh/)",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^2.0.0",
+    "express": "^4.16.2",
+    "json-schema-ref-parser": "^4.1.0",
+    "reload": "^2.2.2",
+    "swagger-ui-express": "^2.0.14"
+  },
+  "scripts": {
+    "dev": "node ./dev"
+  }
+}

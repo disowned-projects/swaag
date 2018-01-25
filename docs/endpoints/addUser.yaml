@@ -1,0 +1,19 @@
+post:
+  tags:
+    - User
+  requestBody:
+    content:
+      ‘application/json’:
+        schema:
+          properties:
+            name:
+              type: string
+            age:
+              type: string
+  responses:
+    ‘200’:
+      description: User Created
+    ‘500’:
+      $ref: '../components/responses.yaml#/internalServerError'
+  security:
+    - jwt: []
