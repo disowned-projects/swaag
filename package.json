@@ -7,6 +7,7 @@
   "author": "Siddharth Doshi <sidoshi510@gmail.com> (https://sid.sh/)",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.3.0",
     "chokidar": "^2.0.0",
     "express": "^4.16.2",
     "json-schema-ref-parser": "^4.1.0",

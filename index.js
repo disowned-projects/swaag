@@ -4,6 +4,7 @@ const swaggerUi = require("swagger-ui-express");
 const jsonRefs = require("json-schema-ref-parser");
 const chokidar = require("chokidar");
 const reload = require("reload");
+const chalk = require("chalk");
 
 const defaults = {
   entryPoint: path.resolve("docs", "openapi.yaml"),
@@ -12,7 +13,19 @@ const defaults = {
 };
 
 const generateHtml = async entryPoint => {
-  const swaggerDocument = await jsonRefs.bundle(entryPoint);
+  let swaggerDocument;
+  try {
+    swaggerDocument = await jsonRefs.bundle(entryPoint);
+  } catch (err) {
+    console.log(
+      chalk.red(
+        `There was an error while parsing your document. Make sure your document is valid JSON/YAML and all your $refs are valid.`
+      )
+    );
+    console.log(err);
+    process.exit(1);
+  }
+
   let html = "";
   const reloadScriptTag = "<script src='/reload/reload.js'></script>";
 
