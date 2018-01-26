@@ -1,6 +1,6 @@
 {
   "name": "swaag",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "API to generate and host swagger UI from documentation files",
   "main": "index.js",
   "repository": "https://github.com/doshisid/swaag",
