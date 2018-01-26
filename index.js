@@ -15,7 +15,7 @@ const defaults = {
 const generateHtml = async entryPoint => {
   let swaggerDocument;
   try {
-    swaggerDocument = await jsonRefs.bundle(entryPoint);
+    swaggerDocument = await jsonRefs.dereference(entryPoint);
   } catch (err) {
     console.log(
       chalk.red(
